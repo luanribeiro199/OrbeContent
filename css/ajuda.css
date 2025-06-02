@@ -1,0 +1,257 @@
+/* Reset e Layout Básico */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #000000; /* Fundo preto */
+  color: #ffffff; /* Texto branco */
+  overflow-x: hidden;
+}
+
+/* Barra de navegação */
+nav.navbar-transparente {
+  padding: 15px 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #8ED61D;
+}
+
+.navbar-light .navbar-toggler {
+  color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.divisão {
+  width: 1px;
+  background: white;
+  margin: 12px 15px;
+}
+
+/* Container principal da ajuda */
+main#ajuda-rapida {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  background: rgba(18, 18, 18, 0.9);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Título da página */
+main#ajuda-rapida h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #8ED61D; /* Verde para títulos */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Accordion */
+#ajudaAccordion {
+  border-radius: 12px;
+  background: #111111;
+  box-shadow: 0 0 15px rgba(0,0,0,0.9);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #333;
+  background-color: #121212;
+}
+
+.accordion-button {
+  background-color: #121212;
+  color: #8ED61D;
+  font-weight: 700;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.accordion-button:hover,
+.accordion-button:not(.collapsed) {
+  background-color: #1F1F1F;
+  color: #A6D82D;
+}
+
+.accordion-body {
+  background-color: #1A1A1A;
+  color: #CCC;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Botões - sempre visíveis, cores e contraste */
+button,
+input[type="submit"],
+input[type="button"] {
+  background-color: #8ED61D; /* verde vibrante */
+  color: #000000; /* texto preto para contraste */
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  opacity: 1 !important; /* garante visibilidade */
+  visibility: visible !important;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #B8E986; /* verde claro no hover */
+  color: #000000;
+}
+
+/* Para dispositivos touch (celular/tablet) */
+@media (hover: none) {
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    background-color: #8ED61D;
+    color: #000000;
+  }
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="button"]:hover {
+    background-color: #8ED61D; /* não muda no hover touch */
+    color: #000000;
+  }
+}
+
+/* Títulos maiores e bold adicionais */
+h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #8ED61D;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+/* Rodapé - manter o seu CSS original */
+footer {
+  background: black;
+  padding: 50px 0 20px;
+  text-align: left;
+  width: 100%;
+  color: white;
+}
+
+footer h4 {
+  color: #919496;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+  color: white;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+footer .navbar-nav a:hover {
+  color: #8ED61D;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  float: right;
+  margin: 0 5px;
+}
+
+/* Responsividade */
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .col-md-2,
+  footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+  footer ul {
+    justify-content: center;
+  }
+  .divisão {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.8rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Responsividade para footer */
+@media (max-width: 767.98px) {
+  footer .container > .row {
+    text-align: center;
+  }
+  footer .container > .row > div {
+    margin-bottom: 2rem;
+  }
+  footer ul {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,250 @@
+
+/* Layout */
+html, body, #home {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#home {
+	min-height: 100vh; /* altura mínima da tela */
+	padding-top: 100px;  /* espaço interno superior */
+	padding-bottom: 100px; /* espaço interno inferior */
+	display: flex;
+	align-items: center;  /* centraliza verticalmente */	
+}
+
+body {
+	background: url(../imagens/capa.png),
+				url(../imagens/ruido.png),
+				linear-gradient(50deg,#38b6ff,#8ed61d);
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+	color: #111; /* melhora contraste geral */
+}
+
+/* Barra de navegação */
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0,0,0,0.6);
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+	color: #c6ff3e; /* tom mais forte que #8ed61d para acessibilidade */
+	outline: 2px solid #c6ff3e;
+	outline-offset: 4px;
+}
+
+.navbar-light .navbar-toggler {
+	color: rgba(255,255,255,0.9);
+	border-color: rgba(255,255,255,0.9);
+}
+
+/* Divisão decorativa */
+.divisão {
+	width: 1px;
+	background: white;
+	margin: 12px 15px;
+}
+
+.foco-visivel {
+	outline: 3px solid #6c63ff;
+	outline-offset: 2px;
+  }
+  
+/* Capa */
+.capa {
+	text-align: center;
+}
+
+.btn-custom {
+	color: white;
+	border-radius: 500px;
+	text-transform: uppercase;
+	transition: background 0.4s, color 0.4s;
+	padding: 10px 20px;
+	font-weight: 600;
+	border: 2px solid transparent;
+}
+
+.btn-roxo {
+	background: #8ed61d;
+}
+
+.btn-roxo:hover,
+.btn-roxo:focus {
+	background: #a6f63e;
+	color: black;
+	outline: 2px solid #a6f63e;
+	outline-offset: 2px;
+}
+
+.btn-branco {
+	border: 2px solid white;
+	color: white;
+	background: transparent;
+}
+
+.btn-branco:hover,
+.btn-branco:focus {
+	background-color: white;
+	color: black;
+	outline: 2px solid black;
+	outline-offset: 2px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+	width: 5%;
+}
+
+/* Estrutura conteúdos */
+.caixa {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#servicos {
+	background: white;
+}
+
+#recursos {
+	color: white;
+	background-color: #111; /* melhora contraste com branco */
+}
+
+#servicos h2, h3 {
+	color: #0074cc; /* azul mais escuro que #38b6ff para contraste adequado */
+}
+
+#recursos h2 {
+	color: white;
+}
+
+#recursos h3 {
+	color: #d2ff5c; /* verde-limão com contraste melhor que #b1fc3a */
+}
+
+.designs {
+	padding: 10px 0;
+}
+
+/* Evitar rotação no mobile */
+.rotacionar {
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	padding-left: 80px;
+}
+
+/* Título da página */
+h1 {
+	font-weight: bold;
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	color: white;
+}
+
+/* Rodapé */
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+	color: #ddd; /* texto com contraste visível */
+}
+
+footer h4 {
+	color: #ccc;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+	color: white;
+	font-size: 0.8em;
+}
+
+footer .navbar-nav a:hover,
+footer .navbar-nav a:focus {
+	color: #9bf0e1;
+	text-decoration: underline;
+	outline: 2px solid #9bf0e1;
+	outline-offset: 2px;
+}
+
+footer ul {
+	list-style: none;
+}
+
+footer ul li {
+	float: right;
+	margin: 0 5px;
+}
+
+/* Tipografia */
+h1 {
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	color: white;
+}
+
+h2 {
+	font-size: 3em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+/* Aumentar foco visível para todos os elementos interativos */
+a:focus,
+button:focus,
+input:focus {
+	outline: 3px solid #fce903;
+	outline-offset: 2px;
+}
+
+/* Responsividade */
+@media (max-width: 575.98px) {
+	.btn-custom {
+		margin: 10px 15px;
+		font-size: 1em;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	h1 {
+		font-size: 3em;
+	}
+	.btn-custom {
+		margin: 10px 15px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	h1 {
+		font-size: 4em;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	h1 {
+		font-size: 5em;
+	}
+}
+
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 6em;
+	}
+}

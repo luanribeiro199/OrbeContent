@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8" /> <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Configuração de responsividade para dispositivos móveis -->
+  <title>Métricas | OrbeContent</title> <!-- Título da aba do navegador -->
+  <link rel="icon" href="imagens/Orbe.png"> <!-- Ícone que aparece na aba do navegador -->
+
+  <!-- Importação do Bootstrap 5 para facilitar o layout responsivo e estilização -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Importação de ícones FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Importação do CSS customizado da página de métricas -->
+  <link rel="stylesheet" href="./css/metricas.css" />
+</head>
+<body>
+
+<!-- Cabeçalho do site com barra de navegação principal -->
+<header role="banner" aria-label="Cabeçalho de navegação">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+    <div class="container">
+      <!-- Logotipo da OrbeContent com link para a página inicial -->
+      <a href="index.html" class="navbar-brand" aria-label="Voltar para a página inicial">
+        <img src="imagens/OrbeNav.png" width="50" alt="Logo OrbeContent">
+      </a>
+      
+      <!-- Botão do menu para telas menores -->
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-principal" aria-label="Abrir menu">
+        <i class="fas fa-bars text-white" aria-hidden="true"></i>
+      </button>
+      
+      <!-- Itens do menu principal -->
+      <div class="collapse navbar-collapse" id="nav-principal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="ajuda.html" class="nav-link">Ajuda</a></li>
+          <li class="nav-item"><a href="metricas.html" class="nav-link">Métricas</a></li>
+           <!-- Separador visual entre links -->
+           <li class="nav-item divisão" role="separator" aria-hidden="true"></li>
+           <li class="nav-item">
+             <a href="#" id="btn-sair" class="nav-link sair-link">Sair</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- Fim do cabeçalho -->
+
+  <!-- Conteúdo principal da página -->
+  <main class="mt-5 pt-4" role="main">
+    <div class="container mt-4">
+      <h1 class="mb-4">Métricas - Posts Publicados</h1>
+
+      <!-- Linha com filtros para busca e seleção de conteúdo -->
+      <div class="row g-2">
+        <!-- Filtro por tipo de conteúdo -->
+        <div class="col-md-3">
+          <label for="filter-tipo" class="form-label visually-hidden">Filtrar por tipo</label>
+          <select id="filter-tipo" class="form-select" aria-label="Filtrar por tipo de conteúdo">
+            <option value="todos">Todos os tipos</option>
+            <option value="post">Post</option>
+            <option value="carrossel">Carrossel</option>
+            <option value="reels">Reels</option>
+            <option value="storie">Storie</option>
+          </select>
+        </div>
+
+        <!-- Filtro por cliente -->
+        <div class="col-md-3">
+          <label for="filter-cliente" class="form-label visually-hidden">Filtrar por cliente</label>
+          <select id="filter-cliente" class="form-select mb-3" aria-label="Filtrar por cliente">
+            <option value="todos">Todos os Clientes</option>
+          </select>
+        </div>
+
+        <!-- Campo de busca por título -->
+        <div class="col-md-4">
+          <label for="search-text" class="form-label visually-hidden">Buscar por título</label>
+          <input type="text" id="search-text" class="form-control" placeholder="Buscar por título..." aria-label="Buscar post pelo título" />
+        </div>
+
+        <!-- Botão para limpar todos os filtros -->
+        <div class="col-md-2">
+          <button id="btn-limpar" class="btn btn-secondary w-100" aria-label="Limpar filtros e buscar novamente">Limpar filtros</button>
+        </div>
+      </div>
+
+      <!-- Container onde os cards de métricas serão exibidos dinamicamente -->
+      <div class="row mt-3" id="container-metricas" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </main>
+
+  <!-- Modal (janela pop-up) que exibe o gráfico de métricas individuais -->
+  <div class="modal fade" id="modalGrafico" tabindex="-1" aria-labelledby="modalGraficoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalGraficoLabel" tabindex="0">Gráfico de Métricas</h5>
+          <!-- Botão para fechar o modal -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Canvas onde o gráfico será desenhado com Chart.js -->
+          <canvas id="graficoIndividual" aria-label="Gráfico de métricas dos posts" role="img"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé da página com seções e links -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Logo no rodapé -->
+        <div class="col-md-2">
+          <img src="imagens/Orbe.png" width="142">
+        </div>
+
+        <!-- Coluna com links institucionais -->
+        <div class="col-md-2">
+          <h4>company</h4>
+          <ul class="navbar-nav">
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Equipe</a></li>
+            <li><a href="">Atualizações</a></li>
+            <li><a href="">Novidades</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna com links para comunidades -->
+        <div class="col-md-2">
+          <h4>comunidades</h4>
+          <ul class="navbar-nav">
+            <li><a href="">Social Media</a></li>
+            <li><a href="">Desenvolvedores</a></li>
+            <li><a href="">Marcas atendidas</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna com links úteis -->
+        <div class="col-md-2">
+          <h4>links uteis</h4>
+          <ul class="navbar-nav">
+            <li><a href="ajuda.html">Ajuda</a></li>
+            <li><a href="">Planos</a></li>
+            <li><a href="">WebDash</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna com links para redes sociais -->
+        <div class="col-md-4">
+          <ul>
+            <li><a href=""><img src="imagens/facebook.png" alt="Facebook"></a></li>
+            <li><a href=""><img src="imagens/twitter.png" alt="Twitter"></a></li>
+            <li><a href=""><img src="imagens/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Importação dos scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- JavaScript do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Biblioteca Chart.js para gerar gráficos -->
+  <script src="./javascript/metricas.js"></script> <!-- Script customizado com a lógica das métricas -->
+  <script>
+  </script>
+</body>
+</html>

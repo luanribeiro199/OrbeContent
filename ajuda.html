@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento HTML5 -->
+<html lang="pt-br">
+<!-- Define o idioma principal da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Garante que a visualização seja adequada em dispositivos móveis -->
+  <title>Ajuda | OrbeContent</title>
+  <!-- Título da aba do navegador -->
+  <link rel="icon" href="imagens/Orbe.png" />
+  <!-- Ícone da aba (favicon) -->
+  
+  <!-- Ícones do Bootstrap (versão 1.10.5) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  
+  <!-- Estilos do Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  
+  <!-- CSS personalizado da página de ajuda -->
+  <link rel="stylesheet" href="./css/ajuda.css" />
+  
+  <!-- Fonte Montserrat (usada para títulos e destaques) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet" />
+
+   <!-- Estilo inline para garantir foco visível em links e botões para acessibilidade -->
+   <style>
+    a:focus, button:focus {
+      outline: 3px solid #6c63ff;
+      outline-offset: 2px;
+    }
+  </style>
+
+</head>
+<body class="pt-5">
+
+
+  <!-- Cabeçalho do site com barra de navegação principal -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente" role="navigation" aria-label="Menu principal">
+      <div class="container">
+        <!-- Logotipo da OrbeContent com link para a página inicial -->
+        <a href="index.html" class="navbar-brand" aria-label="Página inicial OrbeContent">
+          <img src="imagens/OrbeNav.png" width="50" alt="Logotipo OrbeContent" />
+        </a>
+
+        <!-- Botão do menu para telas menores -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav-principal"
+          aria-controls="nav-principal"
+          aria-expanded="false"
+          aria-label="Alternar menu de navegação"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+
+        <!-- Itens do menu principal -->
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="entrar.html" class="nav-link" tabindex="0">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a href="ajuda.html" class="nav-link active" aria-current="page" tabindex="0">Ajuda</a>
+            </li>
+            <li class="nav-item">
+              <a href="entrar.html" class="nav-link" tabindex="0">Métricas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal da página -->
+  <div id="home">
+    <main class="container py-5" role="main">
+      
+      <!-- Seção de ajuda rápida com atalhos para perguntas comuns -->
+      <section id="ajuda-rapida" class="py-5 text-center" aria-labelledby="ajuda-rapida-title">
+        <div class="container">
+          <h2 id="ajuda-rapida-title">Ajuda Rápida</h2>
+          <p class="mb-4">Tá com dúvida? Tá tranquilo, todo mundo tem. Veja as mais comuns:</p>
+
+          <!-- Botões com links para seções do acordeão -->
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#ajudaAccordion" class="btn btn-outline-light" role="button" aria-controls="ajudaAccordion" aria-expanded="false" tabindex="0">
+              <i class="bi bi-person" aria-hidden="true"></i> Criar conta
+            </a>
+            <a href="#ajudaAccordion" class="btn btn-outline-light" role="button" aria-controls="ajudaAccordion" aria-expanded="false" tabindex="0">
+              <i class="bi bi-unlock" aria-hidden="true"></i> Recuperar senha
+            </a>
+            <a href="#ajudaAccordion" class="btn btn-outline-light" role="button" aria-controls="ajudaAccordion" aria-expanded="false" tabindex="0">
+              <i class="bi bi-phone" aria-hidden="true"></i> Orbe no celular
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de perguntas frequentes com acordeão (FAQ) -->
+      <section id="ajuda" class="py-5" aria-label="Seção de perguntas frequentes e ajuda">
+        <div class="accordion" id="ajudaAccordion">
+          
+          <!-- Item: Funcionalidades -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="pagamentosHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pagamentos" aria-expanded="true" aria-controls="pagamentos" aria-label="Alternar painel de funcionalidades">
+                Funcionalidades
+              </button>
+            </h2>
+            <div id="pagamentos" class="accordion-collapse collapse show" aria-labelledby="pagamentosHeading" data-bs-parent="#ajudaAccordion">
+              <div class="accordion-body">
+                Está com dúvidas quanto às funcionalidades da OrbeContent? A gente te explica aqui.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item: Gerenciamento de Contas -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="contaHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conta" aria-expanded="false" aria-controls="conta" aria-label="Alternar painel de gerenciamento de contas">
+                Gerenciamento de Contas
+              </button>
+            </h2>
+            <div id="conta" class="accordion-collapse collapse" aria-labelledby="contaHeading" data-bs-parent="#ajudaAccordion">
+              <div class="accordion-body">
+                Aprenda como alterar sua senha, atualizar seus dados ou excluir sua conta.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item: DashWeb -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="premiumHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#premium" aria-expanded="false" aria-controls="premium" aria-label="Alternar painel DashWeb">
+                DashWeb
+              </button>
+            </h2>
+            <div id="premium" class="accordion-collapse collapse" aria-labelledby="premiumHeading" data-bs-parent="#ajudaAccordion">
+              <div class="accordion-body">
+                Veja as vantagens de usar o Dashboard da Orbe pelo navegador! Mais agilidade e eficiência para você!
+              </div>
+            </div>
+          </div>
+
+          <!-- Item: Recursos do App -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="recursosHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#recursos" aria-expanded="false" aria-controls="recursos" aria-label="Alternar painel recursos do app">
+                Recursos do App
+              </button>
+            </h2>
+            <div id="recursos" class="accordion-collapse collapse" aria-labelledby="recursosHeading" data-bs-parent="#ajudaAccordion">
+              <div class="accordion-body">
+                Também existe o app para celular o Orbe Mobile, para você gerenciar seus conteúdos de onde quiser.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item: Segurança e Privacidade -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="segurancaHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#seguranca" aria-expanded="false" aria-controls="seguranca" aria-label="Alternar painel segurança e privacidade">
+                Segurança e Privacidade
+              </button>
+            </h2>
+            <div id="seguranca" class="accordion-collapse collapse" aria-labelledby="segurancaHeading" data-bs-parent="#ajudaAccordion">
+              <div class="accordion-body">
+                Veja como protegemos seus dados e como você pode manter sua conta segura.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção convite para o Instagram -->
+      <section id="instagram" class="py-5 text-center" aria-labelledby="instagram-title" tabindex="0">
+        <div class="container">
+          <h2 id="instagram-title">Junte-se ao nosso instagram</h2>
+          <p>
+            Faça parte de uma comunidade apaixonada pelo mundo audivisual e vamos juntos explorar tudo isso!
+          </p>
+          <a href="https://www.instagram.com/luan.vribeiro/" class="btn btn-success mt-3" target="_blank" rel="noopener noreferrer" aria-label="Ir para o instagram do Luan Ribeiro, abre em nova aba" tabindex="0">
+            <i class="bi bi-instagram" aria-hidden="true"></i> Ir para o instagram
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Alerta de login necessário -->
+  <div id="avisoLogin" class="alert alert-warning text-center fixed-top w-100 d-none" role="alert" style="z-index: 9999;" aria-live="assertive">
+    Você precisa estar logado para acessar esta página. Redirecionando para a página de login...
+  </div>
+
+  <!-- Rodapé com links e redes sociais -->
+  <footer role="contentinfo" class="mt-5 pt-4 border-top">
+    <div class="container">
+      <div class="row">
+       <!-- Logo -->
+        <div class="col-md-2">
+          <img src="imagens/Orbe.png" width="142" alt="Logotipo OrbeContent" />
+        </div>
+
+        <!-- Seções de links úteis -->
+        <div class="col-md-2">
+          <h4>Company</h4>
+          <ul class="navbar-nav">
+            <li><a href="#" tabindex="0">Sobre</a></li>
+            <li><a href="#" tabindex="0">Equipe</a></li>
+            <li><a href="#" tabindex="0">Atualizações</a></li>
+            <li><a href="#" tabindex="0">Novidades</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Comunidades</h4>
+          <ul class="navbar-nav">
+            <li><a href="#" tabindex="0">Social Media</a></li>
+            <li><a href="#" tabindex="0">Desenvolvedores</a></li>
+            <li><a href="#" tabindex="0">Marcas atendidas</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h4>Links úteis</h4>
+          <ul class="navbar-nav">
+            <li><a href="ajuda.html" tabindex="0">Ajuda</a></li>
+            <li><a href="#" tabindex="0">Suporte</a></li>
+            <li><a href="#" tabindex="0">Termos</a></li>
+            <li><a href="#" tabindex="0">Política de privacidade</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna com direitos autorais -->
+        <div class="col-md-4 text-md-end">
+          <p class="mb-0">&copy; 2025 OrbeContent - Todos os direitos reservados</p>
+          <small>Desenvolvido por Luan Ribeiro & Matheus Grochovski
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts do Bootstrap e JS da página -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="/javascript/ajuda.js" crossorigin="anonymous"></script>
+</body>
+</html>

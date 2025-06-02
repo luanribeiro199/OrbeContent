@@ -1,0 +1,177 @@
+/* metricas.css */
+
+/* Layout
+-----------------------------*/
+html, body, #home {
+	height: 100%;
+	overflow-x: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+  
+/* Barra de navegação
+-----------------------------*/
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0,0,0,0.6);
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #8ed61d;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.divisão {
+	width: 1px;
+	background: white;
+	margin: 12px 15px;
+}
+  /* Área de filtros */
+  .filtros .form-control {
+    border-radius: 0.375rem;
+  }
+  
+  /* Botão limpar filtros */
+  #btn-limpar {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  #btn-limpar:hover {
+    background-color: #5a6268;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Container das métricas */
+  #container-metricas {
+    margin-top: 1rem;
+  }
+  
+  
+  /* Ajustes para form-row no Bootstrap 5 (usa row + gx) */
+  .filtros .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Alinhamento para os selects e input na mesma linha */
+  .filtros .col-md-3,
+  .filtros .col-md-4,
+  .filtros .col-md-2 {
+    flex: 1 1 auto;
+    min-width: 150px;
+  }
+  
+  /* Pequeno ajuste para o placeholder */
+  ::placeholder {
+    color: #6c757d;
+    opacity: 1;
+  }
+  
+
+/* Rodapé
+-----------------------------*/
+footer {
+    background: black;
+    padding: 50px 0 20px;
+    text-align: left;
+    width: 100%;
+    color: white;
+}
+
+footer h4 {
+    color: #919496;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+footer .navbar-nav a:hover {
+    color: #8ed61d;
+    text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  float: right;
+	margin: 0 5px;
+}
+
+/* Responsividade
+-----------------------------*/
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col-md-2,
+    footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    footer ul {
+        justify-content: center;
+    }
+
+    .divisão {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+  /* Responsividade para footer */
+  @media (max-width: 767.98px) {
+    footer .container > .row {
+      text-align: center;
+    }
+    
+    footer .container > .row > div {
+      margin-bottom: 2rem;
+    }
+    
+    footer ul {
+      justify-content: center;
+    }
+  }

@@ -1,0 +1,275 @@
+/* Layout
+-----------------------------*/
+html, body, #home {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+/* Barra de navegação
+-----------------------------*/
+nav.navbar-transparente {
+	padding: 15px 0px;
+	background: rgba(0,0,0,0.6);
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: #8ed61d;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.divisão {
+	width: 1px;
+	background: white;
+	margin: 12px 15px;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background-color: #1c1c1c;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .google-btn {
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: 0.3s;
+  }
+  
+  .google-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .google-btn:hover {
+    background-color: #eaeaea;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 25px 0;
+    color: #aaa;
+    position: relative;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #444;
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    font-size: 0.9rem;
+    margin: 10px 0 5px;
+  }
+  
+  .login-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .remember-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+  
+  .remember-group a {
+    color: #8ed61d;
+    text-decoration: none;
+  }
+  
+  .remember-group a:hover {
+    text-decoration: underline;
+  }
+  
+  .submit-btn {
+    margin-top: 20px;
+    padding: 14px;
+    font-weight: bold;
+    background-color: #8ed61d;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #38b6ff;
+  }
+  
+  .register-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .register-text a {
+    color: #8ed61d;
+    text-decoration: none;
+  }
+  
+  .register-text a:hover {
+    text-decoration: underline;
+  }
+  
+/* Visibilidade para mensagens acessíveis */
+.mensagem-sucesso {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.mensagem-erro {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+
+/* Rodapé
+-----------------------------*/
+footer {
+  background: black;
+  padding: 50px 0 20px;
+  text-align: left;
+  width: 100%;
+  color: white;
+}
+
+footer h4 {
+  color: #919496;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+footer .navbar-nav a {
+  color: white;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+footer .navbar-nav a:hover {
+  color: #8ed61d;
+  text-decoration: none;
+}
+
+footer ul {
+list-style: none;
+}
+
+footer ul li {
+float: right;
+margin: 0 5px;
+}
+
+/* Extra small devices (phones <576px) */
+@media (max-width: 575.98px) {
+	h1 {
+		font-size: 1.6em;
+	}
+	.btn-custom {
+		font-size: 0.9em;
+	}
+}
+
+/* Small devices (phones landscape ≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	h1 {
+		font-size: 1.8em;
+	}
+	.btn-custom {
+		font-size: 1em;
+	}
+}
+
+/* Medium devices (tablets ≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	h1 {
+		font-size: 2em;
+	}
+	.btn-custom {
+		font-size: 1em;
+	}
+}
+
+/* Large devices (desktops ≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	h1 {
+		font-size: 2.2em;
+	}
+}
+
+/* Extra large devices (≥1200px) */
+@media (min-width: 1200px) {
+	h1 {
+		font-size: 2.5em;
+	}
+}

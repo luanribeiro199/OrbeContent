@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!-- Define o tipo do documento como HTML5 -->
+<html lang="pt-br">
+  <!-- Define o idioma do conteúdo como português do Brasil -->
+  <head>
+    <meta charset="utf-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Garante a responsividade do layout em dispositivos móveis -->
+
+    <!-- Inclusão do CSS do Bootstrap 4 para layout responsivo e componentes pré-estilizados -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="..." crossorigin="anonymous">
+
+    <!-- Inclusão do Font Awesome para uso de ícones -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="..." crossorigin="anonymous">
+
+    <!-- Inclusão de um arquivo de estilos customizados da aplicação -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <!-- Título da página exibido na aba do navegador -->
+    <title>OrbeContent</title>
+
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="icon" href="imagens/Orbe.png">
+
+    <!-- Estilo inline para garantir foco visível em links e botões para acessibilidade -->
+    <style>
+      a:focus, button:focus {
+        outline: 3px solid #6c63ff;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Link visível apenas com foco de teclado (acessibilidade) -->
+    <a href="#main-content" class="sr-only sr-only-focusable">Pular para o conteúdo principal</a>
+
+    <!-- Cabeçalho do site com barra de navegação principal -->
+    <header role="banner">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente" aria-label="Menu principal">
+        <div class="container">
+          <!-- Logotipo da OrbeContent com link para a página inicial -->
+          <a href="index.html" class="navbar-brand">
+            <img src="imagens/OrbeContent.svg" width="142" alt="Logo da OrbeContent">
+          </a>
+
+          <!-- Botão do menu para telas menores -->
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Abrir menu de navegação">
+            <i class="fas fa-bars text-white"></i>
+          </button>
+
+          <!-- Itens do menu principal -->
+          <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a href="" class="nav-link">Dashboard</a></li>
+              <li class="nav-item"><a href="ajuda.html" class="nav-link">Ajuda</a></li>
+              <li class="nav-item"><a href="" class="nav-link">Métricas</a></li>
+              <!-- Separador visual entre links -->
+              <li class="nav-item divisão" aria-hidden="true"></li>
+              <li class="nav-item"><a href="Inscrever.html" class="nav-link">Inscrever-se</a></li>
+              <li class="nav-item"><a href="entrar.html" class="nav-link">Entrar</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main id="main-content">
+      <!-- Seção de destaque com carrossel -->
+      <section id="home" class="d-flex">
+        <div class="container align-self-center">
+          <div class="row">
+            <div class="col-md-12 capa">
+
+              <!-- Carrossel de frases e botões de ação -->
+              <div id="carousel-impacto" class="carousel slide" data-ride="carousel" aria-label="Carrossel de destaques">
+                <div class="carousel-inner">
+                  
+                  <!-- Slide ativo do carrossel -->
+                  <div class="carousel-item active">
+                    <h1>Social Media para todos</h1>
+                    <a href="Inscrever.html" class="btn btn-lg btn-custom btn-roxo" aria-label="Aproveite nossa plataforma e inscreva-se">
+                      Aproveite nossa plataforma
+                    </a>
+                    <a href="Inscrever.html" class="btn btn-lg btn-custom btn-branco" aria-label="Obtenha o Orbe Mobile">
+                      Obter Orbe Mobile
+                    </a>
+                  </div>
+
+                  <!-- Segundo slide do carrossel -->
+                  <div class="carousel-item">
+                    <h1>Impulsione seu engajamento com métricas reais</h1>
+                    <a href="entrar.html" class="btn btn-lg btn-custom btn-branco" aria-label="Organize agora com a OrbeContent">
+                      organize agora
+                    </a>
+                  </div>
+
+                </div>
+
+                <!-- Controles do carrossel para navegar entre os slides -->
+                <a href="#carousel-impacto" class="carousel-control-prev" data-slide="prev" role="button" aria-label="Slide anterior">
+                  <i class="fas fa-angle-left fa-3x"></i>
+                </a>
+                <a href="#carousel-impacto" class="carousel-control-next" data-slide="next" role="button" aria-label="Próximo slide">
+                  <i class="fas fa-angle-right fa-3x"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de serviços com imagens e texto explicativo -->
+      <section id="servicos" class="caixa">
+        <div class="container">
+          <div class="row">
+            <!-- Coluna com imagens ilustrativas -->
+            <div class="col-md-6">
+              <div class="row designs">
+                <div class="col-md-6"><img src="imagens/img1.png" class="img-fluid" alt="Design representativo 1"></div>
+                <div class="col-md-6"><img src="imagens/img2.png" class="img-fluid" alt="Design representativo 2"></div>
+              </div>
+              <div class="row designs">
+                <div class="col-md-6"><img src="imagens/img3.png" class="img-fluid" alt="Design representativo 3"></div>
+                <div class="col-md-6"><img src="imagens/img4.png" class="img-fluid" alt="Design representativo 4"></div>
+              </div>
+            </div>
+            <!-- Coluna com texto explicativo sobre os serviços -->
+            <div class="col-md-6">
+              <h2>O que a Orbe tem?</h2>
+              <h3>Gestão</h3>
+              <p>Acompanhe todas as suas campanhas em um só lugar.</p>
+
+              <h3>Métricas</h3>
+              <p>Aqui você encontra as métricas para cada conteúdo. Chega de não entender sobre o crescimento real de sua conta.</p>
+
+              <h3>Planejamento</h3>
+              <p>Aqui a estrela é o seu conteúdo. Organize, planeje, marque tudo do jeitinho que você pensou.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção que descreve os públicos-alvo da plataforma -->
+      <section id="recursos" class="caixa">
+        <div class="container">
+          <div class="row">
+            <!-- Coluna de texto -->
+            <div class="col-md-4">
+              <h2>Para quem é nossa plataforma</h2>
+
+              <h3>Você Social Media</h3>
+              <p>Já sabe o que fazer? Você já manja. A gente está aqui só pra te dar um empurrãozinho.</p>
+
+              <h3>Freelancer e Pequenas Agências</h3>
+              <p>Facilidade para a sua organização. A Orbe quer que você cresça e se desenvolva de maneira organizada.</p>
+
+              <h3>Pra você</h3>
+              <p>Qualquer pessoa que queira organizar seu conteúdo digital com eficiência. A Orbe é de todos para todos.</p>
+            </div>
+            <!-- Coluna com imagens de celulares demonstrando o app -->
+            <div class="col-md-8">
+              <div class="row rotacionar">
+                <div class="col-md-6"><img src="imagens/iphone1.png" class="img-fluid" alt="Visualização do app Orbe em smartphone 1"></div>
+                <div class="col-md-6"><img src="imagens/iphone2.png" class="img-fluid" alt="Visualização do app Orbe em smartphone 2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé da página com links úteis e redes sociais -->
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <!-- Logo da empresa -->
+          <div class="col-md-2"><img src="imagens/Orbe.png" width="142" alt="Logo OrbeContent"></div>
+          <!-- Colunas com links organizacionais -->
+          <div class="col-md-2">
+            <h4>Company</h4>
+            <ul class="navbar-nav">
+              <li><a href="">Sobre</a></li>
+              <li><a href="">Equipe</a></li>
+              <li><a href="">Atualizações</a></li>
+              <li><a href="">Novidades</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4>Comunidades</h4>
+            <ul class="navbar-nav">
+              <li><a href="">Social Media</a></li>
+              <li><a href="">Desenvolvedores</a></li>
+              <li><a href="">Marcas atendidas</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h4>Links úteis</h4>
+            <ul class="navbar-nav">
+              <li><a href="ajuda.html">Ajuda</a></li>
+              <li><a href="">Planos</a></li>
+              <li><a href="">WebDash</a></li>
+            </ul>
+          </div>
+          <!-- Ícones de redes sociais -->
+          <div class="col-md-4">
+            <ul>
+              <li><a href="" aria-label="Facebook da Orbe"><img src="imagens/facebook.png" alt="Facebook"></a></li>
+              <li><a href="" aria-label="Twitter da Orbe"><img src="imagens/twitter.png" alt="Twitter"></a></li>
+              <li><a href="" aria-label="Instagram da Orbe"><img src="imagens/instagram.png" alt="Instagram"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Inclusão de bibliotecas JavaScript para funcionalidades do Bootstrap e interatividade -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- Script JavaScript customizado da aplicação -->
+    <script src="/javascript/index.js"></script>
+  </body>
+</html>
